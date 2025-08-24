@@ -21,7 +21,7 @@
 	},
 	"scripts": {
 		"benchmark": "node benchmark.js",
-		"test": "xo && ava && tsd"
+		"test": "ava && tsd"
 	},
 	"files": [
 		"index.js",
