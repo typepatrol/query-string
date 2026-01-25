@@ -21,7 +21,7 @@
 	},
 	"scripts": {
 		"benchmark": "node benchmark.js",
-		"test": "ava && tsd"
+		"test": "c8 ava && tsd"
 	},
 	"files": [
 		"index.js",
@@ -53,6 +53,7 @@
 	"devDependencies": {
 		"ava": "^6.1.1",
 		"benchmark": "^2.1.4",
+		"c8": "^8.0.1",
 		"deep-equal": "^2.2.3",
 		"fast-check": "^3.15.1",
 		"tsd": "^0.30.7",
@@ -62,5 +63,11 @@
 		"compilerOptions": {
 			"module": "node16"
 		}
+	},
+	"c8": {
+		"reporter": [
+			"text",
+			"lcov"
+		]
 	}
 }
