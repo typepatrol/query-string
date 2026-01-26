@@ -21,7 +21,10 @@
 	},
 	"scripts": {
 		"benchmark": "node benchmark.js",
-		"test": "c8 ava && tsd"
+		"test": "c8 ava && tsd",
+		"test:no-clean": "c8 --no-clean ava && tsd",
+		"test:clean": "rm -rf coverage .nyc_output",
+		"test:report": "c8 report"
 	},
 	"files": [
 		"index.js",
